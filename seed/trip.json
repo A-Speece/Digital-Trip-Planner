@@ -1,0 +1,12 @@
+[
+    {
+        "event": "london",
+        "date": "11-25-2022",
+        "time": "12p.m."
+    },
+    {
+        "event": "paris",
+        "date": "11-30-2022",
+        "time": "12p.m."
+    }
+]
