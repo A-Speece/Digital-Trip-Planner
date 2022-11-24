@@ -13,7 +13,7 @@ const seedDatabase = async () => {
   });
 
   for (const trip of tripData) {
-    await trip.create({
+    await Trip.create({
       ...trip,
       user_id: users[Math.floor(Math.random() * users.length)].id,
     });

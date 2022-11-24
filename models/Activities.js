@@ -28,8 +28,16 @@ Activities.init(
       allowNull: false,
     },
     total_cost: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    trip_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "trip",
+        key: "id",
+        unique: false,
+      },
     },
   },
 
