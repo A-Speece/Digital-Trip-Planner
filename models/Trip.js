@@ -22,19 +22,14 @@ Trip.init(
     date: {
       type: DataTypes.DATE,
       allowNull: false,
-    },
-    activity: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    
+    }
     },
 
   {
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: "Trip",
+    modelName: "trip",
   }
 );
 
