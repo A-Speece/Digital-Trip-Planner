@@ -1,0 +1,29 @@
+header, .project:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+  }
+
+  body {
+    color: blue;
+    background-color: rgb(154, 196, 210);
+    
+  }
+  
+  .col-md-4 {
+    color: blue;
+    border-radius: 5px;
+  }
+  .col-md-6 {
+    color: blue;
+    border-radius: 5px;
+  }
+  .col-md-3 {
+    color: blue;
+
+  }
+ .col-12 {
+    color: blue;
+    text-shadow: 2px 2px lightblue;
+ }
+ .form-control {
+    margin: 5px;
+ }
