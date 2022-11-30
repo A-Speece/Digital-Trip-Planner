@@ -13,17 +13,24 @@
 <body>
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <a href="/">Digital Trip Planner</a>
-      </h1>
-      <nav>
+      <nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Digital Trip Planner</a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         {{#if logged_in}}
-        <a href="/trips">Trip</a> |
-        <button class="no-button" id="logout">logout</button>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/trips">Trip</a>
+        </li>
         {{else}}
-        <a href="/login">login</a>
+        <li class="nav-item">
+          <a class="nav-link" href="/login">login</a>
+        </li>
         {{/if}}
-      </nav>
+      </ul>
+    </div>
+  </div>
+</nav>
     </header>
     <main class="container container-fluid mt-5">
       {{{ body }}}
