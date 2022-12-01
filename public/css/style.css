@@ -1,29 +1,48 @@
-header, .project:not(:last-child) {
-    border-bottom: 1px solid #ccc;
-  }
+header,
+.project:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
 
-  body {
-    color: blue;
-    background-color: rgb(154, 196, 210);
-    
-  }
-  
-  .col-md-4 {
-    color: blue;
-    border-radius: 5px;
-  }
-  .col-md-6 {
-    color: blue;
-    border-radius: 5px;
-  }
-  .col-md-3 {
-    color: blue;
+body {
+  color: blue;
+  background-color: rgb(154, 196, 210);
+}
 
-  }
- .col-12 {
-    color: blue;
-    text-shadow: 2px 2px lightblue;
- }
- .form-control {
-    margin: 5px;
- }
+.col-md-4 {
+  color: blue;
+  border-radius: 5px;
+}
+.col-md-6 {
+  color: blue;
+  border-radius: 5px;
+}
+.col-md-3 {
+  color: blue;
+}
+.col-12 {
+  color: blue;
+  text-shadow: 2px 2px lightblue;
+}
+.form-control {
+  margin: 5px;
+  border-color: rgb(154, 196, 210);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  color: black;
+}
+
+.activity-container {
+  display: flex;
+  flex-direction: row;
+}
+
+#submit-button {
+  margin: 5px;
+}
+
+.nav-link {
+  display: none;
+}
