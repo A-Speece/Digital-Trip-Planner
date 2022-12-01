@@ -2,6 +2,19 @@ $(function () {
   $("#datepicker").datepicker();
 });
 
+const logout = async () => {
+  const response = await fetch('/api/users/logout', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+  });
+
+  if (response.ok) {
+    document.location.replace('/');
+  } else {
+    alert(response.statusText);
+  }
+};
+
 const newFormHandler = async (event) => {
   event.preventDefault();
 
@@ -37,3 +50,5 @@ const newFormHandler = async (event) => {
 document
   .querySelector("#new-event-form")
   .addEventListener("submit", newFormHandler);
+
+  document.querySelector('#logout').addEventListener('click', logout);
