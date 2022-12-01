@@ -1,31 +1,46 @@
-<form class="row g-3 needs-validation" novalidate>
-  <div class="col-md-4 col">
-    <label for="validationCustom01" class="form-label">Event Name:</label>
-    <input type="text" class="form-control" id="validationCustom01" value="" required>
-  <div class="col-md-6">
-    <label for="validationCustom03" class="form-label">Time:</label>
-    <input type="text" class="form-control" id="validationCustom03" required>
+<main class="row justify-content-around">
+<div class="form-container">
+<div id="submit-event" class="col-3  bg-light p-3">  
+<form id="new-event-form" class="row g-3 needs-validation" novalidate>
+  <div class="col-md-25">
+    <label for="validationCustom01" class="form-label" >Event Name:</label>
+    <input type="text" class="form-control" id="event-name" value="" required>
+  <div class="col-md-25">
+    <label for="validationCustom02" class="form-label">Time:</label>
+    <input type="text" class="form-control" id="event-time" required>
   </div>
-  <div class="col-md-3">
-    <label for="validationCustom05" class="form-label">Activity:</label>
-    <input type="text" class="form-control" id="validationCustom03" required>
+  <div class="col-md-25">
+    <label for="validationCustom03" class="form-label">Activity:</label>
+    <input type="text" class="form-control" id="event-activity" required>
   </div>
-  <div class="col-md-3">
-    <label for="validationCustom05" class="form-label">Total Cost:</label>
-    <input type="text" class="form-control" id="validationCustom03" required>
+  <div class="col-md-25">
+    <label for="validationCustom04" class="form-label">Total Cost:</label>
+    <input type="text" class="form-control" id="event-total-cost" required>
   </div>
   <div class="md-form md-outline input-with-post-icon datepicker" id="formatsSection">
-  <input placeholder="Select date" type="text" id="formats-example" class="form-control">
-  <label for="formats-example">Try me...</label>
+    <label for="validationCustom05" class="form-label">Date of Event</label>
+  <input placeholder="Select date" type="text" id="datepicker" class="form-control">
+  {{!-- <label for="formats-example">Try me...</label> --}}
   <i class="fas fa-calendar input-prefix" tabindex=0></i>
 </div>
-  <div class="col-12">
+  {{!-- <div class="col-12">
     </div>
-  </div>
+  </div> --}}
   <div class="col-12">
-    <button class="btn btn-primary" type="submit">Submit Event</button>
+    <button id="submit-button" class="btn btn-primary justify-content-center" type="submit">Submit Event</button>
   </div>
 </form>
+</div>
+      
+</div>
+<div class="activity-container">
+  <div class="col-9">
+   {{#if submit }}
+   <a href="/views/activities.handlebars"></a>
+   {{/if}}
+</div>
+</div>
+</main>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
  <script src="./js/trip.js"</script>
