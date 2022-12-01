@@ -24,12 +24,27 @@ router.get("/", async (req, res) => {
   }
 });
 
+
 router.get("/trip", async (req, res) => {
   try {
+    const tripsData = await Trip.findAll({
+      include: [
+        {
+          model: Activities,
+        },
+      ],
+    });
+
+    // Serialize data so the template can read it
+    const events = tripsData.map((Activities) => Activities.get({ plain: true }));
+    console.log(events);
+
     res.render("trip", {
+      events, 
       logged_in: req.session.logged_in
     });
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });

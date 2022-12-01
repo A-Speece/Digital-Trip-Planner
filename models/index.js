@@ -12,6 +12,7 @@ Trip.belongsTo(User, {
 });
 
 Activities.belongsTo(Trip, {
+  
   foreignKey: 'trip_id'
 });
 
@@ -19,5 +20,14 @@ Trip.hasMany(Activities, {
     foreignKey: 'trip_id',
     onDelete: 'CASCADE'
   });
+
+// Activities.belongsTo(User, {
+//   through: {
+//     model: Trip,
+//     unique: false
+//   }, 
+
+// })
+
 
 module.exports = { User, Trip, Activities };
