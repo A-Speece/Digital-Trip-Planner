@@ -52,4 +52,4 @@ user testing has been done for this project
 <p>Email: wakeham.connor@gmail.com<p>
 
 <p>GitHub Repo: https://github.com/A-Speece/Digital-Trip-Planner.git <p>
-<p> Heroku Application: <p>
+<p> Heroku Application: https://digital-trip-planner.herokuapp.com/ <p>
